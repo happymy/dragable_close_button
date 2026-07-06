@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "可拖拽关闭按钮",
+  "version": "1.0",
+  "description": "一个可自由拖拽的按钮，点击关闭当前标签页",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
